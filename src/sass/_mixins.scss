@@ -1,4 +1,7 @@
-/*Layout responsivo*/
+/*
+Isaac Fraire Heredia
+Layout responsivo
+*/
 @mixin breakpoint($point) {
     @if $point == small {
       @media (max-width: #{upper-bound($small)}) { @content ; }
