@@ -1,0 +1,23 @@
+<div id="wellmark-results" class="container">
+  <div *ngIf="datos.length == 0">
+    No names found, please add a new name.
+  </div>
+  <table class="wellmark-tab" *ngIf="datos.length != 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos; let i = index">
+        <td class="index">{{ i + 1 }}</td>
+        <td>{{ dato.name }}</td>
+        <td>{{ dato.birth_day }}</td>
+        <td class="remove"><span (click)="remove(i)">x</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,32 @@
+.wellmark-tab{
+    width: 100%;
+    border-collapse: collapse;
+    tbody{
+        tr{
+            transition: all .4s ease 0s;
+            &:nth-child(odd){
+                background-color: #ecf0f1;
+            }
+            &:hover{
+                background-color: #cacaca;
+            }
+            td{
+                padding: .5rem;
+                &.index, &.remove{
+                    text-align: center;
+                }
+                &.remove{
+                    span{
+                        padding: .3rem;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+#wellmark-results{
+    padding-bottom: 3rem;
+}

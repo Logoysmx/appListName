@@ -1,0 +1,24 @@
+/*Layout responsivo*/
+@mixin breakpoint($point) {
+    @if $point == small {
+      @media (max-width: #{upper-bound($small)}) { @content ; }
+   }
+    @else if $point == medium {
+      @media (min-width: #{lower-bound($medium)}) and (max-width: #{upper-bound($medium)}) { @content ; }
+   }
+     @else if $point == medium-up {
+      @media (min-width: #{lower-bound($medium)}) { @content ; }
+   }
+   @else if $point == large {
+      @media (min-width: #{lower-bound($large)}) and (max-width: #{upper-bound($large)}) { @content ; }
+   }
+   @else if $point == large-up {
+      @media (min-width:  #{upper-bound($large)})  { @content ; }
+   }  
+   //Para un layout en mobile y orientación landscape menor a 737px
+   @else if $point == medium-landscape {
+       @media (max-width: #{lower-bound($medium)}) and (orientation: landscape) { @content ; }
+   }   
+ }
+ 
+ 
